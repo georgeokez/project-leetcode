@@ -1,7 +1,5 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        merged = []
-
         if (len(word1) == len(word2)):
             return mergeStrings(word1, word2)
 
@@ -13,9 +11,9 @@ class Solution:
 
 
 def mergeStrings(str1, str2):
-    merged = []
+    merged = ''
     for i in range(len(str1)):
-            merged.append(str1[i])
-            merged.append(str2[i])
+            merged = merged + str1[i]
+            merged = merged + str2[i]
 
-    return ''.join(merged)
+    return merged
